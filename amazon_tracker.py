@@ -33,7 +33,9 @@ for product_url in links:
 if len(price_drop_products) == 0:
     sys.exit('No Price drop found')
 
-MSG = f"There is a drop in price of {len(price_drop_products)}" + " products.\n" + "Click on link to purchase.\n"
+MSG_ = " products.\n" + "Click on link to purchase.\n"
+MSG = f"There is a drop in price of {len(price_drop_products)}" + MSG_  
+
 
 for items in price_drop_list_url:
     MSG = MSG + "\n\n" + items

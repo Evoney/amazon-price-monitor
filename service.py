@@ -6,7 +6,7 @@ from os import environ as env
 from twilio.rest import Client
 import requests
 from bs4 import BeautifulSoup
-from lxml import etree as et
+import xml.etree.ElementTree as et
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -38,7 +38,7 @@ def scraper(url):
     """
     This function create a scraper dom by url.
     """
-    response = requests.get(url, headers=header)
+    response = requests.get(url, headers=header, timeout=5)
     soup = BeautifulSoup(response.content, 'html.parser')
-    dom = et.HTML(str(soup))
+    dom = et.parse(str(soup))
     return dom

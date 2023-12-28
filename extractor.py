@@ -13,9 +13,9 @@ def extractor():
     Run Extractor.
     """
     with open('links.txt', encoding="utf-8") as f:
-        links = f.read().splitlines() 
+        links = f.read().splitlines()
 
-    with open('master_data.csv', 'w') as csv_file:
+    with open('master_data.csv', 'w', encoding="utf-8") as csv_file:
         writer = csv.writer(csv_file)
         writer.writerow(['product name', 'price', 'url'])
 
