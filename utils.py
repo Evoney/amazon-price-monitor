@@ -10,7 +10,7 @@ def get_amazon_price(dom):
         price = dom.xpath('//span[@class="a-offscreen"]/text()')[0]
         price = price.replace('.', '').replace('R$', '').replace(',', '.')
         return float(price)
-    except Exception:
+    except (Exception,):
         price = 'Not Available'
         return None
 
@@ -21,7 +21,7 @@ def get_product_name(dom):
     try:
         name = dom.xpath('//span[@id="productTitle"]/text()')
         return name[0].strip()
-    except Exception:
+    except (Exception,):
         name = 'Not Available'
         return None
 

@@ -10,6 +10,9 @@ from extractor import extractor
 extractor()
 
 def job():
+    """
+    Run Job.
+    """
     system("python amazon_tracker.py")
 
 schedule.every(1).hours.do(job)

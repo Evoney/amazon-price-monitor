@@ -9,6 +9,9 @@ from service import scraper
 from utils import get_amazon_price, get_product_name
 
 def extractor():
+    """
+    Run Extractor.
+    """
     with open('links.txt', encoding="utf-8") as f:
         links = f.read().splitlines() 
 
