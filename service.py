@@ -3,10 +3,10 @@
 This is a module to create the services that will be used by.
 """
 from os import environ as env
+import xml.etree.ElementTree as et
 from twilio.rest import Client
 import requests
 from bs4 import BeautifulSoup
-import xml.etree.ElementTree as et
 from dotenv import load_dotenv
 load_dotenv()
 
