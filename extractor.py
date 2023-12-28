@@ -1,3 +1,7 @@
+"""Extractor module
+
+This is a module to extract prices from amazon by a links file.
+"""
 import time
 import random
 import csv
@@ -5,7 +9,7 @@ from service import scraper
 from utils import get_amazon_price, get_product_name
 
 def extractor():
-    with open('links.txt') as f:
+    with open('links.txt', encoding="utf-8") as f:
         links = f.read().splitlines() 
 
     with open('master_data.csv', 'w') as csv_file:

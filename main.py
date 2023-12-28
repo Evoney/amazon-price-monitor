@@ -1,6 +1,10 @@
-import schedule
+"""Main module
+
+This is a module to run the job.
+"""
 import time
 from os import system
+import schedule
 from extractor import extractor
 
 extractor()
