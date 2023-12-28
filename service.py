@@ -14,9 +14,11 @@ account_sid = env['ACCOUNT_SID']
 auth_token = env['AUTH_TOKEN']
 twilio_phone_number = env['TWILIO_PHONE_NUMBER']
 phone_number = env['PHONE_NUMBER']
+apple_kit_string = "AppleWebKit/537.36 (KHTML, like Gecko) "
+browsers = "Chrome/81.0.4044.138 Safari/537.36"
 
 header = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) " + apple_kit_string + browsers,
     'Accept': '*/*', 
     'Accept-Encoding': 'gzip, deflate, br', 
     'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'
